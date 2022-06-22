@@ -4,24 +4,26 @@
     <p>Pipes Incluidos en Angular - Usualmente en el CommonModule.</p>
 </div>
 <div class="p-grid">
-    <div class="p-col-4">
+    <div class="flex flex-row">
+    <div class="p-col-4 m-4">
         <p-card  header="uppercase"
                  [subheader]="nombreUpper">
             {{ nombreUpper | uppercase}}
         </p-card>
     </div>
-    <div class="p-col-4">
+    <div class="p-col-4 m-4">
         <p-card  header="lowercase"
         [subheader]="nombreLower">
    {{ nombreLower | lowercase }}
 </p-card>
     </div>
-    <div class="p-col-4">
+    <div class="p-col-4 m-4">
         <p-card  header="titlecase"
         [subheader]="nombrecompleto">
    {{ nombrecompleto | titlecase}}
 </p-card>
     </div>
+</div>
 </div>
 
 <div class="text-layout">
@@ -29,7 +31,8 @@
     <p>Date | Fecha | Pipe</p>
 </div>
 <div class="p-grid">
-    <div class="p-col-6">
+    <div class="flex flex-row">
+    <div class="p-col-6 m-4">
         <p-card>
           <ul>
             <li>fecha</li>
@@ -46,7 +49,7 @@
           </ul>
         </p-card>
     </div>
-    <div class="p-col-6">
+    <div class="p-col-6 m-4">
         <p-card>
             <ul>
                 <li> {{ fecha }}</li>
@@ -63,4 +66,5 @@
               </ul>
         </p-card>
     </div>
+</div>
 </div>
