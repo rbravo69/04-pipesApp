@@ -4,15 +4,63 @@
     <p>Pipes Incluidos en Angular - Usualmente en el CommonModule.</p>
 </div>
 <div class="p-grid">
-    <div class="p-col-4 text-layout">
-        <p-card>
-            test
+    <div class="p-col-4">
+        <p-card  header="uppercase"
+                 [subheader]="nombreUpper">
+            {{ nombreUpper | uppercase}}
         </p-card>
     </div>
-    <div class="p-col-4 text-layout">
-        2
+    <div class="p-col-4">
+        <p-card  header="lowercase"
+        [subheader]="nombreLower">
+   {{ nombreLower | lowercase }}
+</p-card>
     </div>
-    <div class="p-col-4 text-layout">
-        3
+    <div class="p-col-4">
+        <p-card  header="titlecase"
+        [subheader]="nombrecompleto">
+   {{ nombrecompleto | titlecase}}
+</p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Pipes para mostrar fechas</h1>
+    <p>Date | Fecha | Pipe</p>
+</div>
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-card>
+          <ul>
+            <li>fecha</li>
+            <li>fecha | Date</li>
+            <li>  fecha | date:'short' </li>
+            <li>  fecha | date:'long' </li>
+            <li> fecha | date:'dd/MM/YYYY'</li>
+            <li> fecha | date:'dd MMMM YYYY'</li>
+          </ul>
+          <hr>
+          <ul>
+            <li> fecha | date:'long':'GMT-6' </li>
+            <li> fecha | date:'long':'GMT-4' </li>
+          </ul>
+        </p-card>
+    </div>
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li> {{ fecha }}</li>
+                <li> {{ fecha | date }}</li>
+                <li> {{ fecha | date:'short' }}</li>
+                <li> {{ fecha | date:'long' }}</li>
+                <li> {{ fecha | date:'dd/MM/YYYY' }}</li>
+                <li> {{ fecha | date:'dd MMMM YYYY'}}</li>
+              </ul>
+              <hr>
+              <ul>
+                <li>{{ fecha | date:'long':'GMT-6' }}</li>
+                <li>{{ fecha | date:'long':'GMT-4' }}</li>
+              </ul>
+        </p-card>
     </div>
 </div>
